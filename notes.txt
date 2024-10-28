@@ -1,0 +1,9 @@
+Question | Answer | Context | Ground Truth
+
+
+1. Context Precision: How relevant is the context to the question?
+2. Context Recall: Is the retreiver able to find all relevant context?
+3. Answer Relevancy: Is the answer relevant to the question?
+4. Answer Factual Correctness: Is the answer factually correct?
+5. Answer Faithfulness: Is the answer faithful to the context?
+6. Answer Diversity: Is the answer diverse?
