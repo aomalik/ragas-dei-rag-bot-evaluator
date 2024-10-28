@@ -1,0 +1,137 @@
+{
+    "DiversityTraining": [
+        {
+            "question": "Why is diversity training important in the workplace?",
+            "ground_truth": "Diversity training helps improve inclusivity and understanding, reducing unconscious biases.",
+            "answer": "Diversity training fosters a respectful and inclusive workplace, enhancing teamwork and reducing conflicts."
+        },
+        {
+            "question": "What are common challenges in diversity training?",
+            "ground_truth": "Resistance to change, unconscious biases, and lack of engagement.",
+            "answer": "Participants may resist or feel uncomfortable, highlighting the need for empathetic facilitation."
+        },
+        {
+            "question": "How does diversity training benefit employee engagement?",
+            "ground_truth": "It helps employees feel valued and respected, which increases motivation and engagement.",
+            "answer": "Diversity training shows a commitment to inclusion, which boosts morale and retention."
+        },
+        {
+            "question": "What is unconscious bias, and how is it addressed in training?",
+            "ground_truth": "Unconscious bias is an automatic, unintentional bias, which training helps individuals recognize and address.",
+            "answer": "Training provides tools to recognize and reduce biases, fostering fair treatment of all colleagues."
+        },
+        {
+            "question": "How often should diversity training be conducted?",
+            "ground_truth": "At least annually, with periodic refreshers to reinforce learning.",
+            "answer": "Regular training is recommended to sustain awareness and adapt to evolving diversity issues."
+        }
+    ],
+    "ERGSupport": [
+        {
+            "question": "What are ERGs, and why are they important?",
+            "ground_truth": "Employee Resource Groups (ERGs) provide support and networking opportunities for underrepresented groups.",
+            "answer": "ERGs offer community and support, helping companies build inclusive workplaces."
+        },
+        {
+            "question": "How can ERGs improve workplace inclusion?",
+            "ground_truth": "They promote cultural awareness, support minority voices, and drive inclusivity initiatives.",
+            "answer": "ERGs enable employees to express themselves and influence inclusivity efforts directly."
+        },
+        {
+            "question": "What are common challenges ERGs face?",
+            "ground_truth": "Limited resources, lack of executive support, and engagement issues.",
+            "answer": "ERGs may struggle with funding and visibility, needing strong leadership backing."
+        },
+        {
+            "question": "How can companies support ERG leaders?",
+            "ground_truth": "Provide resources, leadership training, and visibility within the organization.",
+            "answer": "Leadership support and resources enable ERG leaders to make a meaningful impact."
+        },
+        {
+            "question": "What role do ERGs play in company culture?",
+            "ground_truth": "They foster belonging, support diversity initiatives, and enhance cultural understanding.",
+            "answer": "ERGs contribute to a supportive culture where diverse perspectives are valued."
+        }
+    ],
+    "RecruitmentInsights": [
+        {
+            "question": "How can recruitment practices be made more inclusive?",
+            "ground_truth": "Use bias-free language in job descriptions, structured interviews, and diverse hiring panels.",
+            "answer": "Creating inclusive recruitment practices involves reducing biases at every step of the hiring process."
+        },
+        {
+            "question": "What is a common barrier to diverse hiring?",
+            "ground_truth": "Unconscious bias during screening and selection processes.",
+            "answer": "Biases may cause recruiters to favor certain backgrounds or experiences unintentionally."
+        },
+        {
+            "question": "How does diversity impact company performance?",
+            "ground_truth": "Companies with diverse teams tend to perform better due to a range of perspectives and ideas.",
+            "answer": "Diverse perspectives foster innovation and problem-solving, boosting overall performance."
+        },
+        {
+            "question": "What is blind recruitment, and how does it help?",
+            "ground_truth": "Blind recruitment removes identifying information to reduce bias in hiring.",
+            "answer": "It levels the playing field by focusing on skills and experience over background."
+        },
+        {
+            "question": "How can companies ensure diverse representation in leadership?",
+            "ground_truth": "Implement mentorship programs, equitable promotion policies, and diverse hiring practices.",
+            "answer": "Supporting diverse leadership requires commitment to equitable opportunities and development."
+        }
+    ],
+    "InclusivePolicy": [
+        {
+            "question": "What is an inclusive workplace policy?",
+            "ground_truth": "A policy that promotes equality, accessibility, and a welcoming environment for all employees.",
+            "answer": "Inclusive policies aim to create an environment where all individuals feel respected and valued."
+        },
+        {
+            "question": "How can a company improve its parental leave policy to be more inclusive?",
+            "ground_truth": "Offer parental leave regardless of gender and support flexible working options post-leave.",
+            "answer": "Inclusive parental leave policies support all parents, fostering a family-friendly workplace."
+        },
+        {
+            "question": "What is a reasonable accommodation in the workplace?",
+            "ground_truth": "An adjustment to a job or work environment that allows an employee with a disability to perform their duties.",
+            "answer": "Reasonable accommodations help employees with disabilities work effectively and comfortably."
+        },
+        {
+            "question": "Why is pay transparency important for inclusion?",
+            "ground_truth": "It helps eliminate pay disparities and fosters trust in the organization.",
+            "answer": "Transparency in pay demonstrates fairness and commitment to equal treatment."
+        },
+        {
+            "question": "What is flexible work policy, and how does it promote inclusion?",
+            "ground_truth": "Flexible work allows varied schedules and remote options, catering to diverse employee needs.",
+            "answer": "Flexible policies support work-life balance, which benefits employees with different needs."
+        }
+    ],
+    "InclusiveLanguage": [
+        {
+            "question": "Why is inclusive language important in the workplace?",
+            "ground_truth": "It fosters respect and ensures that all individuals feel acknowledged and valued.",
+            "answer": "Using inclusive language builds a welcoming environment and reduces misunderstandings."
+        },
+        {
+            "question": "What is gender-neutral language, and why is it important?",
+            "ground_truth": "Language that avoids gender-specific terms, ensuring inclusivity for all gender identities.",
+            "answer": "Gender-neutral language respects all identities, making communication more inclusive."
+        },
+        {
+            "question": "How can companies encourage the use of inclusive language?",
+            "ground_truth": "Provide training, set language guidelines, and encourage awareness of inclusive practices.",
+            "answer": "Companies can create a culture of respect by emphasizing inclusive language norms."
+        },
+        {
+            "question": "What are microaggressions, and how can inclusive language help?",
+            "ground_truth": "Subtle, often unintentional comments that can be offensive. Inclusive language reduces these incidents.",
+            "answer": "Being mindful of language helps prevent microaggressions and fosters respect."
+        },
+        {
+            "question": "How should companies handle language-based feedback?",
+            "ground_truth": "Encourage open dialogue and provide constructive feedback sensitively.",
+            "answer": "Language feedback should be approached respectfully, promoting learning and growth."
+        }
+    ]
+}
