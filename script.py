@@ -7,10 +7,11 @@ from datasets import Dataset
 import asyncio
 from datetime import datetime
 
-# All cats -> ["DiversityTraining", "ERGSupport", "RecruitmentInsights", "InclusivePolicy", "InclusiveLanguage"]
-#categoryToProcess = ["DiversityTraining", "ERGSupport", "RecruitmentInsights", "InclusivePolicy", "InclusiveLanguage"]
+# All cats -> ["DiversityTraining", "ERGSupport", "RecruitmentInsights", "InclusivePolicy", "InclusiveLanguage", AllyshipTraining]
 
+#categoryToProcess = ["DiversityTraining", "ERGSupport", "RecruitmentInsights", "InclusivePolicy", "InclusiveLanguage", "AllyshipTraining"]
 categoryToProcess = ["DiversityTraining", "ERGSupport"]
+
 print("Processing categories: ", categoryToProcess)
 
 
