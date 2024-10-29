@@ -26,4 +26,4 @@ def ask_deially(question):
         print("Response content:", response.text)
         return None
 
-ask_deially("What is the capital of France?")
+#ask_deially("What is the capital of France?")

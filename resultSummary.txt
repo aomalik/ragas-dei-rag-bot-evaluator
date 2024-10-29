@@ -1,0 +1,7 @@
+2024-10-29 17:38:19 | DiversityTraining | {'answer_relevancy': 0.8375, 'answer_correctness': 0.6232, 'semantic_similarity': 0.9161}
+2024-10-29 17:42:13 | DiversityTraining | {'answer_relevancy': 0.8374, 'answer_correctness': 0.5472, 'semantic_similarity': 0.9161}
+2024-10-29 17:44:10 | ERGSupport | {'answer_relevancy': 0.8063, 'answer_correctness': 0.4875, 'semantic_similarity': 0.9053}
+2024-10-29 17:46:43 | RecruitmentInsights | {'answer_relevancy': 0.7750, 'answer_correctness': 0.4423, 'semantic_similarity': 0.9008}
+2024-10-29 17:48:47 | InclusivePolicy | {'answer_relevancy': 0.8636, 'answer_correctness': 0.5095, 'semantic_similarity': 0.9002}
+2024-10-29 17:50:37 | InclusiveLanguage | {'answer_relevancy': 0.7700, 'answer_correctness': 0.5486, 'semantic_similarity': 0.8909}
+2024-10-29 17:52:30 | AllyshipTraining | {'answer_relevancy': 0.6942, 'answer_correctness': 0.4966, 'semantic_similarity': 0.8939}
