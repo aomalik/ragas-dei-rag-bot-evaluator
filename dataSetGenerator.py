@@ -12,7 +12,7 @@ def create_ragas_dataset(category, question_data_file='questionData.json', datas
     
     for cat in category:
         if os.path.exists(cat + '_' + dataset_file):
-            print("Loading existing dataset...")
+            print("Loading existing dataset for category: ", cat)
             # Load the dataset from the CSV file
             ragas_df = pd.read_csv(cat + '_' + dataset_file)
             

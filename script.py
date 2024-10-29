@@ -20,6 +20,7 @@ ragas_dataset = create_ragas_dataset(categoryToProcess)
 async def evaluate_ragas_dataset(cats):
     for cat in cats:
         ragas_dataset = Dataset.from_csv(cat + '_' + 'dataset.csv')
+        #https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/
         result = evaluate(
             ragas_dataset,
             metrics=[
