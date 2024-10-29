@@ -33,31 +33,31 @@ def create_ragas_dataset(category, question_data_file='questionData.json', datas
             # Iterate over each question in the specified category
             
             
-            for cat in category:
-                for question_item in tqdm(question_data[cat]):
-                    question = question_item['question']
-                    print("question: ", question)
-                    ground_truth = question_item['ground_truth']
-                    print("ground_truth: ", ground_truth)
+            
+            for question_item in tqdm(question_data[cat]):
+                question = question_item['question']
+                print("question: ", question)
+                ground_truth = question_item['ground_truth']
+                print("ground_truth: ", ground_truth)
 
-                    # Get the answer from DEIAlly
-                    answer_response = ask_deially(question)
-                    print("answer_response: ", answer_response)
-                    answer = answer_response.get('message', 'No answer provided')
-                
-                    # Append the data to the dataset list
-                    ragas_dataset.append({
-                        'question': question,
-                        'answer': answer,
-                        'ground_truth': ground_truth,
-                        'category': cat
-                    })
+                # Get the answer from DEIAlly
+                answer_response = ask_deially(question)
+                print("answer_response: ", answer_response)
+                answer = answer_response.get('message', 'No answer provided')
             
-                # Convert the list to a DataFrame
-                ragas_df = pd.DataFrame(ragas_dataset)
-            
-                # Save the DataFrame to a CSV file for reuse
-                ragas_df.to_csv(cat + '_' + dataset_file, index=False)
+                # Append the data to the dataset list
+                ragas_dataset.append({
+                    'question': question,
+                    'answer': answer,
+                    'ground_truth': ground_truth,
+                    'category': cat
+                })
+        
+            # Convert the list to a DataFrame
+            ragas_df = pd.DataFrame(ragas_dataset)
+        
+            # Save the DataFrame to a CSV file for reuse
+            ragas_df.to_csv(cat + '_' + dataset_file, index=False)
     
     # Convert the DataFrame to a Dataset
     #ragas_eval_dataset = Dataset.from_pandas(ragas_df)
