@@ -9,8 +9,8 @@ from datetime import datetime
 
 # All cats -> ["DiversityTraining", "ERGSupport", "RecruitmentInsights", "InclusivePolicy", "InclusiveLanguage", AllyshipTraining]
 
-#categoryToProcess = ["DiversityTraining", "ERGSupport", "RecruitmentInsights", "InclusivePolicy", "InclusiveLanguage", "AllyshipTraining"]
-categoryToProcess = ["DiversityTraining", "ERGSupport"]
+categoryToProcess = ["DiversityTraining", "ERGSupport", "RecruitmentInsights", "InclusivePolicy", "InclusiveLanguage", "AllyshipTraining"]
+#categoryToProcess = ["DiversityTraining", "ERGSupport"]
 
 print("Processing categories: ", categoryToProcess)
 
@@ -60,6 +60,9 @@ async def evaluate_ragas_dataset(cats):
                 result['answer_correctness'],
                 result['semantic_similarity'],
             ])
+    print("Done processing all requestedcategories")
+    print("--------------------------------")
+    print("Result details stored in results.csv \nSummary stored in resultSummary.txt")
     return result
 
 asyncio.run(evaluate_ragas_dataset(categoryToProcess))

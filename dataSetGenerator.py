@@ -17,7 +17,7 @@ def create_ragas_dataset(category, question_data_file='questionData.json', datas
             ragas_df = pd.read_csv(cat + '_' + dataset_file)
             
         else:
-            print("Creating new dataset...")
+            print("Creating new dataset for category: ", cat)
             
             with open(question_data_file, 'r') as file:
                 question_data = json.load(file)
@@ -35,7 +35,7 @@ def create_ragas_dataset(category, question_data_file='questionData.json', datas
                 ground_truth = question_item['ground_truth']
 
                 # Get the answer from DEIAlly
-                print("Question for asking DEIAlly: ", question)
+                #print("Question for asking DEIAlly: ", question)
                 answer_response = ask_deially(question)
                 answer = answer_response.get('message', 'No answer provided')
             

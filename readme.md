@@ -1,21 +1,20 @@
 # RAGAS Evaluation for RAG Chat Applications
 
-This project is designed to evaluate the performance of API based RAG Chatbots's AI in answering questions related to various categories such as Diversity Training, ERG Support, Recruitment Insights, Inclusive Policy, and Inclusive Language.
+This project aims to evaluate the performance of API-based RAG Chatbots' AI in answering questions related to various categories, including Diversity Training, ERG Support, Recruitment Insights, Inclusive Policy, and Inclusive Language.
 
-The tool includes a set of questions related to DEI with ground truths.
-
+The tool includes a set of questions related to DEI (Diversity, Equity, and Inclusion) with corresponding ground truths.
 
 ## Setup
 
 1. Clone the repository:
     ```sh
-    git clone this repo
+    git clone <repository_url>
     ```
 2. Navigate to the project directory:
     ```sh
-    cd yourproject
+    cd <project_directory>
     ```
-3. Install the required dependencies, ideally in a new environment:
+3. Install the required dependencies, ideally in a new environment named 'deially-evaluator':
     ```sh
     pip install -r requirements.txt
     ```
@@ -23,23 +22,23 @@ The tool includes a set of questions related to DEI with ground truths.
     ```sh
     DEIALLY_API_KEY=your_api_key
     OPENAI_API_KEY=your_api_key
-    DEIALLY_API_URL=https://app.deially.ai for production
+    DEIALLY_API_URL=https://app.deially.ai
     ```
 
 ## Usage
-Step 1: Make sure questionData.json has the category and questions you want to evaluate for that category.
-Step 2: If you want to run ask_llm in DEIAlly, make sure to delete all .csv files in project root directory.
-Otherwise, RAGAS evaluator will use the old data from .csv files to save API calls.
-Step 3: Select the categories you want to evaluate for by changing the categoryToProcess list in script.py.
-Step 4: Run the script.
-```sh
-python script.py
-```
-Step 4: Check the results in results.csv file.
 
+1. Ensure `questionData.json` contains the categories and questions you want to evaluate.
+2. If you want to run `ask_llm` in DEIAlly, delete all `.csv` files in the project root directory. Otherwise, the RAGAS evaluator will use the existing data from the `.csv` files to save API calls.
+3. Select the categories you want to evaluate by modifying the `categoryToProcess` list in `script.py`.
+4. Run the script:
+    ```sh
+    python script.py
+    ```
+5. Check the results in the `results.csv` file.
 
 ## Notes/ToDos
-- Once DEIAlly api is updated to provide context, update script.py to run more metrics.
-- We need to improve the quality of ground truths in questionData.json.
-- We need to add more questions to questionData.json.
-- If we can access the files on production, we may be able to automate the process of creating the questions and ground truths using RAGAS.
+
+- Once the DEIAlly API is updated to provide context, update `script.py` to run additional metrics.
+- Improve the quality of ground truths in `questionData.json`.
+- Add more questions to `questionData.json`.
+- If we can access the files in production, we may be able to automate the process of creating the questions and ground truths using RAGAS.
