@@ -4,39 +4,42 @@ This project is designed to evaluate the performance of API based RAG Chatbots's
 
 The tool includes a set of questions related to DEI with ground truths.
 
-## Table of Contents
 
-- [Project Title](#project-title)
-- [Table of Contents](#table-of-contents)
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Description
-
-This project involves creating datasets for different categories, querying DEIAlly's AI for answers, and evaluating the AI's performance using various metrics. The results are then saved to a CSV file for further analysis.
-
-## Installation
+## Setup
 
 1. Clone the repository:
     ```sh
-    git clone find my repo
+    git clone this repo
     ```
 2. Navigate to the project directory:
     ```sh
     cd yourproject
     ```
-3. Install the required dependencies:
+3. Install the required dependencies, ideally in a new environment:
     ```sh
     pip install -r requirements.txt
     ```
 4. Set up your environment variables by creating a `.env` file and adding your DEIAlly API key:
     ```sh
-    DEIALLY-API-KEY=your_api_key_here
+    DEIALLY_API_KEY=your_api_key
+    OPENAI_API_KEY=your_api_key
+    DEIALLY_API_URL=https://app.deially.ai for production
     ```
 
 ## Usage
-
+Step 1: Make sure questionData.json has the category and questions you want to evaluate for that category.
+Step 2: If you want to run ask_llm in DEIAlly, make sure to delete all .csv files in project root directory.
+Otherwise, RAGAS evaluator will use the old data from .csv files to save API calls.
+Step 3: Select the categories you want to evaluate for by changing the categoryToProcess list in script.py.
+Step 4: Run the script.
+```sh
 python script.py
+```
+Step 4: Check the results in results.csv file.
+
+
+## Notes/ToDos
+- Once DEIAlly api is updated to provide context, update script.py to run more metrics.
+- We need to improve the quality of ground truths in questionData.json.
+- We need to add more questions to questionData.json.
+- If we can access the files on production, we may be able to automate the process of creating the questions and ground truths using RAGAS.

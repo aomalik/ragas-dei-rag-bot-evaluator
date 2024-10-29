@@ -5,9 +5,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def ask_deially(question):
-    url = "https://app.deially.ai/chat/api/chat/"
+    url = os.getenv('DEIALLY_API_URL')
     headers = {
-        "Authorization": f"Api-key {os.getenv('DEIALLY-API-KEY')}",
+        "Authorization": f"Api-key {os.getenv('DEIALLY_API_KEY')}/chat/api/chat/",
         "Content-Type": "application/json"
     }
     payload = {
