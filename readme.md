@@ -34,7 +34,7 @@ The tool includes a set of questions related to DEI (Diversity, Equity, and Incl
     ```sh
     python script.py
     ```
-5. Check the results in the `results.csv` file.
+5. Check the results in the `results.csv` file and `resultSummary.txt` for a summary (more helpful).
 
 ## Notes/ToDos
 
