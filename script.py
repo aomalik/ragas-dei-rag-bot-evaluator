@@ -5,18 +5,19 @@ import csv
 import os
 from datasets import Dataset
 import asyncio
+from datetime import datetime
 
-#All cats -> ["DiversityTraining", "ERGSupport", "RecruitmentInsights", "InclusivePolicy", "InclusiveLanguage"]
+# All cats -> ["DiversityTraining", "ERGSupport", "RecruitmentInsights", "InclusivePolicy", "InclusiveLanguage"]
+#categoryToProcess = ["DiversityTraining", "ERGSupport", "RecruitmentInsights", "InclusivePolicy", "InclusiveLanguage"]
 
-categoryToProcess = ["DiversityTraining", "ERGSupport", "RecruitmentInsights", "InclusivePolicy", "InclusiveLanguage"]
-#categoryToProcess = ["DiversityTraining", "ERGSupport"]
+categoryToProcess = ["DiversityTraining", "ERGSupport"]
+print("Processing categories: ", categoryToProcess)
 
 
 ragas_dataset = create_ragas_dataset(categoryToProcess)
 
 async def evaluate_ragas_dataset(cats):
     for cat in cats:
-        #ragas_dataset = pd.read_csv(cat + '_' + 'dataset.csv')
         ragas_dataset = Dataset.from_csv(cat + '_' + 'dataset.csv')
         result = evaluate(
             ragas_dataset,
@@ -30,26 +31,28 @@ async def evaluate_ragas_dataset(cats):
 
             ],
         )
-        #await asyncio.sleep(0)
         
 
-        print(result)
+        print("Result: ", result)
+        
 
-        # Define the results file
-        results_file = 'results.csv'
-
-        # Check if the file exists
+        results_file = 'resultSummary.txt'
         file_exists = os.path.isfile(results_file)
-
-        # Open the file in append mode
+        
+        with open(results_file, mode='a', newline='') as result_file:
+            current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            result_file.write(f"{current_time} | {cat} | {result}\n")
+        #Storing detailed results in csv
+        results_file = 'results.csv'
+        file_exists = os.path.isfile(results_file)
+        
         with open(results_file, mode='a', newline='') as file:
             writer = csv.writer(file)
-
+            
             # If the file does not exist, write the header
             if not file_exists:
                 writer.writerow(['category', 'answer_relevancy', 'answer_correctness', 'semantic_similarity'])
-
-            # Write the result row
+                
             writer.writerow([
                 cat,
                 result['answer_relevancy'],

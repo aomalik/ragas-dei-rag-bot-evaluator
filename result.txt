@@ -1,0 +1,1 @@
+{'answer_relevancy': 0.7838, 'answer_correctness': 0.3522, 'semantic_similarity': 0.8580}

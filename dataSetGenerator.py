@@ -35,6 +35,7 @@ def create_ragas_dataset(category, question_data_file='questionData.json', datas
                 ground_truth = question_item['ground_truth']
 
                 # Get the answer from DEIAlly
+                print("Question for asking DEIAlly: ", question)
                 answer_response = ask_deially(question)
                 answer = answer_response.get('message', 'No answer provided')
             
